@@ -9,11 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet private weak var countLabel: UILabel!
+    var count = 0
+
+    @IBAction func countUpButton(_ sender: Any) {
+        count = count + 1
+        countLabel.text = String(count)
     }
 
+
+    @IBAction func resetButton(_ sender: Any) {
+        count = 0
+        countLabel.text = String(count)
+    }
 
 }
 
