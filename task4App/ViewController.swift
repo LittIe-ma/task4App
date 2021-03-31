@@ -10,10 +10,10 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet private weak var countLabel: UILabel!
-    var count = 0
+    private var count = 0
 
     @IBAction func countUpButton(_ sender: Any) {
-        count = count + 1
+        count += 1
         countLabel.text = String(count)
     }
 
@@ -22,6 +22,4 @@ class ViewController: UIViewController {
         count = 0
         countLabel.text = String(count)
     }
-
 }
-
